@@ -1,12 +1,13 @@
 import React from 'react';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 
-import './default.css';
+import { useAppSelector } from 'store';
+import useTheme from 'config/theme';
 
 function App() {
 
-	const theme = createTheme({
-	});
+	const selectedTheme = useAppSelector((state) => state.siteConfiguration.theme)
+	const theme = useTheme(selectedTheme)
 
 	return (
 		<ThemeProvider theme={theme}>

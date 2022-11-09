@@ -5,6 +5,8 @@ import { StyledEngineProvider } from '@mui/material/styles';
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import { Store } from './store';
 
 const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement
@@ -12,8 +14,10 @@ const root = ReactDOM.createRoot(
 root.render(
 	<React.StrictMode>
 		<StyledEngineProvider injectFirst>
-			<CssBaseline enableColorScheme />
-			<App />
+			<Provider store={Store}>
+				<CssBaseline enableColorScheme />
+				<App />
+			</Provider>
 		</StyledEngineProvider>
 	</React.StrictMode>
 );

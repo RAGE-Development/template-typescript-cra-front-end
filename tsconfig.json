@@ -22,7 +22,8 @@
     "baseUrl": "src"
   },
   "include": [
-    "src"
+    "src",
+    "src/config",
   ],
   "exclude": [
     "node_modules",

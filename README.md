@@ -4,3 +4,4 @@
 
 - MUI v5
 - Jest + React Testing Library
+- Redux Toolkit
