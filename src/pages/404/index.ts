@@ -1,2 +1,1 @@
-import NotFound from './404';
-export { NotFound as default };
+export { NotFound as default, NotFound } from './404';

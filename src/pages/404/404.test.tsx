@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, screen } from "@testing-library/react";
 
-import NotFound from './404';
+import { NotFound } from './404';
 
 describe("Page: 404", () => {
 

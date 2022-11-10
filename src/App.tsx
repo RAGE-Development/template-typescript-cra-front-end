@@ -1,17 +1,20 @@
 import React from 'react';
 import { ThemeProvider } from '@mui/material/styles';
 
-import { useAppSelector } from 'store';
-import useTheme from 'config/theme';
+import useApp from 'useApp.hook';
+import { RouterProvider } from 'react-router-dom';
+import { RouterConfig } from 'routes';
 
-function App() {
+const App: React.FC = () => {
 
-	const selectedTheme = useAppSelector((state) => state.siteConfiguration.theme)
-	const theme = useTheme(selectedTheme)
+	const { config } = useApp()
 
 	return (
-		<ThemeProvider theme={theme}>
-		</ThemeProvider>
+		<div data-testid="app">
+			<ThemeProvider theme={config.theme}>
+				<RouterProvider router={RouterConfig} />
+			</ThemeProvider>
+		</div>
 	);
 }
 

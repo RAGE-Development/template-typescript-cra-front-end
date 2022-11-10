@@ -4,4 +4,7 @@
 
 - MUI v5
 - Jest + React Testing Library
-- Redux Toolkit
+- Redux Toolkit @
+- React Router v6
+- Firebase + ReactFire
+- React Helmet Async

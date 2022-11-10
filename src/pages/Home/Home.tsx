@@ -1,9 +1,12 @@
 import React from 'react'
+import useHome from './useHome.hook';
 
-const Home = () => {
+export const Home: React.FC = () => {
+
+	useHome()
+
 	return (
-		<div data-testid="home-main">Home</div>
+		<div data-testid="home-main">
+		</div>
 	)
 }
-
-export default Home
