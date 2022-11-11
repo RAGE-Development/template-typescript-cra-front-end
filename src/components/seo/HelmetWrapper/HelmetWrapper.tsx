@@ -12,7 +12,7 @@ const HelmetWrapper: React.FC<PropsWithChildren> = ({ children }) => {
 	return (
 		<>
 			<Helmet>
-				<title>{route.title}</title>
+				<title>{`${route.title}`}</title>
 			</Helmet>
 			{children}
 		</>

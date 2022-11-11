@@ -12,8 +12,8 @@ type IRoute = IRouteObject & {
 }
 
 const routes: { [key: string]: IRoute } = {
-	"home": {
-		id: 'home',
+	"default": {
+		id: 'default',
 		title: 'Home',
 		description: 'Home page',
 		index: true,

@@ -4,12 +4,10 @@ import { logEvent } from 'firebase/analytics';
 
 import { useAppSelector } from 'store';
 import useTheme from 'config/theme';
-import { useLocation } from 'react-router-dom';
 
 const useApp = () => {
 	/** Globals */
 	const analytics = useAnalytics();
-	const location = useLocation();
 
 	/** States */
 	const selectedTheme = useAppSelector((state) => state.siteConfiguration.theme)
@@ -21,8 +19,8 @@ const useApp = () => {
 
 	// Log a new page view, when the window location path changes
 	useEffect(() => {
-		logEvent(analytics, 'page_view', { page_location: location.pathname });
-	}, [location.pathname])
+		logEvent(analytics, 'page_view', { page_location: window.location.pathname });
+	}, [window.location.pathname])
 
 	return {
 		config: {
