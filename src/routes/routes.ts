@@ -23,9 +23,9 @@ const routes: { [key: string]: IRoute } = {
 	},
 	"404": {
 		id: '404',
-		title: '404',
+		title: 'Page Not Found',
 		description: 'Not found',
-		path: "/404",
+		path: "*",
 		element: wrapWithHelmet(NotFound),
 		authenticated: false,
 	}
