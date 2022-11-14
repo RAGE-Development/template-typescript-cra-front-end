@@ -32,6 +32,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "build-dev": "dotenv -e .env.development.local react-scripts build",
+    "build-prod": "dotenv -e .env.production.local react-scripts build",
+    "deploy-firebase-dev": "firebase use default && yarn build-dev && firebase deploy",
+    "deploy-firebase-prod": "firebase use production && yarn build-prod && firebase deploy",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
   },
