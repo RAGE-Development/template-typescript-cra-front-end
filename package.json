@@ -73,7 +73,7 @@
     "eslint-plugin-react": "^7.31.8",
     "eslint-plugin-storybook": "^0.6.7",
     "prop-types": "^15.8.1",
-    "webpack": "^5.75.0"
+    "webpack": "^5.76.0"
   },
   "eslintConfig": {
     "overrides": [
